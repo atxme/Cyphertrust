@@ -6,6 +6,19 @@ int main (int argc, char *argv[]){
         std::cout << "required more than 1 argument" << std::endl;
         return 1;
     }
+    bool isUser;
+    connected=False;
+    while ( connected !=True ){
 
-    
+        isUser = verifyUserData();
+        if (!isUser){
+            createUser();
+        }
+
+        else {
+            free(isUser);
+            connected = true;
+        }
+
+    }
 }
